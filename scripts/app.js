@@ -1751,6 +1751,15 @@ class WebDev100Days {
                 technologies: ["HTML", "CSS", "Javascript", "API"],
                 features: ["Recipe Finder"]
             },
+            {
+                originalDay: 168,
+                name: "Colour Blindness Simulator",
+                description:"Understand color blindness effects with real-time simulation",
+                demoLink: "./public/Day-197/index.html",
+                category: "games",
+                technologies: ["HTML", "CSS", "Javascript"],
+                features:["Simulation", "Interactive","Awareness"]
+            },
 
         ];
 
