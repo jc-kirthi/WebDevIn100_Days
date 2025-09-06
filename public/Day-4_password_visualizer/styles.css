@@ -273,3 +273,113 @@ body {
         font-size: 1.5rem;
     }
 }
+
+/* === NEW PASSWORD GENERATOR CONTROLS === */
+
+.controls {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    border: 1px solid #dee2e6;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+}
+
+.controls .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+#lengthRange {
+    flex: 1;
+    margin-left: 12px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.checkbox-group label {
+    font-size: 13px;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.options-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 13px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    flex: 1;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    box-shadow: 0 4px 12px rgba(102,126,234,0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(102,126,234,0.4);
+}
+
+.history {
+    margin-top: 10px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 12px;
+    border: 1px solid #eee;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.history h4 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.history ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.history li {
+    padding: 6px 0;
+    border-bottom: 1px dashed #f1f1f1;
+    word-break: break-all;
+    font-family: monospace;
+    font-size: 13px;
+    color: #444;
+}
+
+.history li:last-child {
+    border-bottom: none;
+}
