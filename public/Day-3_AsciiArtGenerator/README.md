@@ -1,6 +1,6 @@
 # ASCII Art Generator 🎨
 
-**Created by Amaan Syed**
+**Created by Abdul Sammed**
 
 A beautiful, modern web application that transforms your text into stunning ASCII art using AI. Powered by Puter.js and Claude Sonnet 4.
 
@@ -90,8 +90,8 @@ This project is part of the [100_Days_100_webprojects](https://github.com/ruchik
 
 ## 👨‍💻 Author
 
-**Amaan Syed**
-- Created as part of SSOC4 (Social Season of Code 4)
+**Abdul Sammed**
+- Created as part of GSSOC
 - Passionate about web development and AI integration
 
 ## 🙏 Acknowledgments

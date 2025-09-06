@@ -1,41 +1,580 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Physics Simulation by Vishisht Dwivedi</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Physics Simulation by ABDUL SAMMED</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .stats-panel {
+            flex: 1;
+            min-width: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .stats-panel h2 {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ffcc00;
+        }
+
+        .stat {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding: 12px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .stat:hover {
+            background: rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .stat-value {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #ffcc00;
+        }
+
+        .controls-panel {
+            flex: 1;
+            min-width: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .controls-panel h2 {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ffcc00;
+        }
+
+        .control-group {
+            margin-bottom: 20px;
+        }
+
+        .control-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .slider-value {
+            color: #ffcc00;
+            font-weight: bold;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            height: 8px;
+            -webkit-appearance: none;
+            appearance: none;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+            outline: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #ffcc00;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+            background: #ffdd44;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        button {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #ffcc00, #ff9900);
+            color: #1a2a6c;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        #reset {
+            background: linear-gradient(135deg, #ff4d4d, #cc0000);
+            color: white;
+        }
+
+        .canvas-container {
+            flex-basis: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        canvas {
+            display: block;
+            background: #1a2a6c;
+        }
+
+        .instructions {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .instructions h2 {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ffcc00;
+        }
+
+        .instructions ul {
+            list-style-type: none;
+        }
+
+        .instructions li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .instructions li i {
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #ffcc00;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div>
-        <h3>
-            Number of Clicks :
-        </h3>
-        <h3 id="clicks" class="scores">0</h3>
+    <div class="header">
+        <h1>Physics Simulation</h1>
+        <p>by ABDUL SAMMED</p>
     </div>
-    <div>
-        <h3>
-            Number of Circles Left :
-        </h3>
-        <h3 id="numberOfCircles" class="scores">0</h3>
-    </div>
-    <div>
-        <label for="gravity">Gravity : </label>
-        <input type="range" name="gravity" id="gravity" min="0" max="0.1" step="0.001">
-    </div>
-    <div>
-        <label for="airDrag">Air Drag : </label>
-        <input type="range" name="airDrag" id="airDrag" min="0" max="0.0001" step="0.00001">
-    </div>
-    <div>
-        <label for="elasticity">Elasticity of Walls : </label>
-        <input type="range" name="elasticity" id="elasticity" min="0" max="1" step="0.01">
-    </div>
-    <button id="reset">RESET</button>
-    <canvas></canvas>
-    <script src="app.js"></script>
-</body>
 
+    <div class="container">
+        <div class="stats-panel">
+            <h2><i class="fas fa-chart-line"></i> Simulation Stats</h2>
+            <div class="stat">
+                <span>Number of Clicks:</span>
+                <span id="clicks" class="stat-value">0</span>
+            </div>
+            <div class="stat">
+                <span>Circles Remaining:</span>
+                <span id="numberOfCircles" class="stat-value">0</span>
+            </div>
+            <div class="stat">
+                <span>Simulation Speed:</span>
+                <span id="simSpeed" class="stat-value">60 FPS</span>
+            </div>
+        </div>
+
+        <div class="controls-panel">
+            <h2><i class="fas fa-sliders-h"></i> Physics Controls</h2>
+            <div class="control-group">
+                <div class="control-label">
+                    <span>Gravity: <span id="gravityValue">0.05</span></span>
+                    <span class="slider-value">0.05</span>
+                </div>
+                <input type="range" name="gravity" id="gravity" min="0" max="0.1" step="0.001" value="0.05">
+            </div>
+            
+            <div class="control-group">
+                <div class="control-label">
+                    <span>Air Drag: <span id="airDragValue">0.00005</span></span>
+                    <span class="slider-value">0.00005</span>
+                </div>
+                <input type="range" name="airDrag" id="airDrag" min="0" max="0.0001" step="0.00001" value="0.00005">
+            </div>
+            
+            <div class="control-group">
+                <div class="control-label">
+                    <span>Elasticity: <span id="elasticityValue">0.8</span></span>
+                    <span class="slider-value">0.8</span>
+                </div>
+                <input type="range" name="elasticity" id="elasticity" min="0" max="1" step="0.01" value="0.8">
+            </div>
+            
+            <div class="button-group">
+                <button id="reset">
+                    <i class="fas fa-redo"></i> RESET
+                </button>
+                <button id="pause">
+                    <i class="fas fa-pause"></i> PAUSE
+                </button>
+                <button id="addCircles">
+                    <i class="fas fa-plus-circle"></i> ADD CIRCLES
+                </button>
+            </div>
+        </div>
+
+        <div class="canvas-container">
+            <canvas width="800" height="500"></canvas>
+        </div>
+    </div>
+
+    <div class="instructions">
+        <h2><i class="fas fa-info-circle"></i> Instructions</h2>
+        <ul>
+            <li><i class="fas fa-mouse-pointer"></i> Click anywhere on the canvas to create circles</li>
+            <li><i class="fas fa-sliders-h"></i> Adjust the physics parameters using the sliders</li>
+            <li><i class="fas fa-redo"></i> Use the RESET button to clear all circles</li>
+            <li><i class="fas fa-plus-circle"></i> Use the ADD CIRCLES button to add multiple circles at once</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <p>Created with JavaScript and Canvas API | Physics Simulation</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const canvas = document.querySelector('canvas');
+            const ctx = canvas.getContext('2d');
+            const clicksElement = document.getElementById('clicks');
+            const circlesElement = document.getElementById('numberOfCircles');
+            const resetButton = document.getElementById('reset');
+            const pauseButton = document.getElementById('pause');
+            const addCirclesButton = document.getElementById('addCircles');
+            const gravitySlider = document.getElementById('gravity');
+            const airDragSlider = document.getElementById('airDrag');
+            const elasticitySlider = document.getElementById('elasticity');
+            const gravityValue = document.getElementById('gravityValue');
+            const airDragValue = document.getElementById('airDragValue');
+            const elasticityValue = document.getElementById('elasticityValue');
+            const simSpeedElement = document.getElementById('simSpeed');
+
+            // Set canvas size to match its container
+            function resizeCanvas() {
+                canvas.width = canvas.offsetWidth;
+                canvas.height = canvas.offsetHeight;
+            }
+
+            // Initial resize
+            resizeCanvas();
+            
+            // Resize when window changes
+            window.addEventListener('resize', resizeCanvas);
+
+            // Physics parameters
+            let gravity = parseFloat(gravitySlider.value);
+            let airDrag = parseFloat(airDragSlider.value);
+            let elasticity = parseFloat(elasticitySlider.value);
+            let isPaused = false;
+            let clickCount = 0;
+            let circles = [];
+            let frameCount = 0;
+            let startTime = Date.now();
+            let fps = 0;
+
+            // Circle class
+            class Circle {
+                constructor(x, y, dx, dy, radius) {
+                    this.x = x;
+                    this.y = y;
+                    this.dx = dx;
+                    this.dy = dy;
+                    this.radius = radius;
+                    this.color = this.getRandomColor();
+                    this.mass = radius * 0.1;
+                }
+
+                getRandomColor() {
+                    const colors = [
+                        '#FF5252', '#FF4081', '#E040FB', '#7C4DFF', 
+                        '#536DFE', '#448AFF', '#40C4FF', '#18FFFF',
+                        '#64FFDA', '#69F0AE', '#B2FF59', '#EEFF41',
+                        '#FFFF00', '#FFD740', '#FFAB40', '#FF6E40'
+                    ];
+                    return colors[Math.floor(Math.random() * colors.length)];
+                }
+
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = this.color;
+                    ctx.fill();
+                    ctx.strokeStyle = 'white';
+                    ctx.lineWidth = 2;
+                    ctx.stroke();
+                }
+
+                update() {
+                    // Apply gravity
+                    this.dy += gravity;
+                    
+                    // Apply air drag
+                    this.dx *= (1 - airDrag);
+                    this.dy *= (1 - airDrag);
+                    
+                    // Update position
+                    this.x += this.dx;
+                    this.y += this.dy;
+                    
+                    // Handle collisions with walls
+                    if (this.x - this.radius < 0) {
+                        this.x = this.radius;
+                        this.dx = -this.dx * elasticity;
+                    } else if (this.x + this.radius > canvas.width) {
+                        this.x = canvas.width - this.radius;
+                        this.dx = -this.dx * elasticity;
+                    }
+                    
+                    if (this.y - this.radius < 0) {
+                        this.y = this.radius;
+                        this.dy = -this.dy * elasticity;
+                    } else if (this.y + this.radius > canvas.height) {
+                        this.y = canvas.height - this.radius;
+                        this.dy = -this.dy * elasticity;
+                        
+                        // Add some friction when hitting the ground
+                        this.dx *= 0.9;
+                    }
+                    
+                    this.draw();
+                }
+            }
+
+            // Create circles on click
+            canvas.addEventListener('click', function(event) {
+                const rect = canvas.getBoundingClientRect();
+                const x = event.clientX - rect.left;
+                const y = event.clientY - rect.top;
+                
+                // Random velocity
+                const dx = (Math.random() - 0.5) * 10;
+                const dy = (Math.random() - 0.5) * 10;
+                
+                // Random radius
+                const radius = Math.random() * 15 + 10;
+                
+                circles.push(new Circle(x, y, dx, dy, radius));
+                clickCount++;
+                clicksElement.textContent = clickCount;
+                circlesElement.textContent = circles.length;
+            });
+
+            // Add multiple circles at once
+            addCirclesButton.addEventListener('click', function() {
+                for (let i = 0; i < 10; i++) {
+                    const x = Math.random() * (canvas.width - 40) + 20;
+                    const y = Math.random() * (canvas.height - 40) + 20;
+                    const dx = (Math.random() - 0.5) * 10;
+                    const dy = (Math.random() - 0.5) * 10;
+                    const radius = Math.random() * 15 + 10;
+                    
+                    circles.push(new Circle(x, y, dx, dy, radius));
+                }
+                clickCount += 10;
+                clicksElement.textContent = clickCount;
+                circlesElement.textContent = circles.length;
+            });
+
+            // Reset simulation
+            resetButton.addEventListener('click', function() {
+                circles = [];
+                clickCount = 0;
+                clicksElement.textContent = clickCount;
+                circlesElement.textContent = circles.length;
+            });
+
+            // Pause/resume simulation
+            pauseButton.addEventListener('click', function() {
+                isPaused = !isPaused;
+                if (isPaused) {
+                    pauseButton.innerHTML = '<i class="fas fa-play"></i> RESUME';
+                } else {
+                    pauseButton.innerHTML = '<i class="fas fa-pause"></i> PAUSE';
+                }
+            });
+
+            // Update slider values
+            gravitySlider.addEventListener('input', function() {
+                gravity = parseFloat(this.value);
+                gravityValue.textContent = gravity.toFixed(3);
+            });
+
+            airDragSlider.addEventListener('input', function() {
+                airDrag = parseFloat(this.value);
+                airDragValue.textContent = airDrag.toFixed(5);
+            });
+
+            elasticitySlider.addEventListener('input', function() {
+                elasticity = parseFloat(this.value);
+                elasticityValue.textContent = elasticity.toFixed(2);
+            });
+
+            // Animation loop
+            function animate() {
+                requestAnimationFrame(animate);
+                
+                // Calculate FPS
+                frameCount++;
+                const now = Date.now();
+                const elapsed = now - startTime;
+                
+                if (elapsed >= 1000) {
+                    fps = Math.round((frameCount * 1000) / elapsed);
+                    simSpeedElement.textContent = `${fps} FPS`;
+                    startTime = now;
+                    frameCount = 0;
+                }
+                
+                if (isPaused) return;
+                
+                // Clear canvas
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // Draw gradient background
+                const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+                gradient.addColorStop(0, '#1a2a6c');
+                gradient.addColorStop(0.5, '#b21f1f');
+                gradient.addColorStop(1, '#fdbb2d');
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                
+                // Draw grid
+                ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+                ctx.lineWidth = 1;
+                
+                // Vertical lines
+                for (let x = 0; x < canvas.width; x += 20) {
+                    ctx.beginPath();
+                    ctx.moveTo(x, 0);
+                    ctx.lineTo(x, canvas.height);
+                    ctx.stroke();
+                }
+                
+                // Horizontal lines
+                for (let y = 0; y < canvas.height; y += 20) {
+                    ctx.beginPath();
+                    ctx.moveTo(0, y);
+                    ctx.lineTo(canvas.width, y);
+                    ctx.stroke();
+                }
+                
+                // Update and draw circles
+                for (let i = 0; i < circles.length; i++) {
+                    circles[i].update();
+                }
+                
+                circlesElement.textContent = circles.length;
+            }
+
+            // Start animation
+            animate();
+        });
+    </script>
+</body>
 </html>
