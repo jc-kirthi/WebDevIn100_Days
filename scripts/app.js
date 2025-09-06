@@ -1755,7 +1755,7 @@ class WebDev100Days {
                originalDay: 168,
                name: "Testimonial Carousel",
                description: "An interactive testimonial carousel with auto-slide, navigation buttons, and a grid of student reviews.",
-               demoLink: "./public/Testimonial_Carousel/index.html",
+               demoLink: "./public/TestimonialCarousel/index.html",
                category: "components",
                technologies: ["HTML", "CSS", "JavaScript"],
                features: [
@@ -1766,7 +1766,7 @@ class WebDev100Days {
                  "Responsive design with hover effects",
                  "Custom styled cards with profile photos and reviews"
                          ]
-            }
+            },
 
         ];
 
