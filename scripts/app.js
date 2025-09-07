@@ -1759,8 +1759,16 @@ class WebDev100Days {
                 category: "AI/ML",
                 technologies: ["HTML", "CSS", "Javascript", "Python"],
                 features: ["Summerizer","Txt","Doc","Pdf"]
+            },
+            {
+                originalDay: 169,
+                name: "Colour Blindness Simulator",
+                description:"Understand color blindness effects with real-time simulation",
+                demoLink: "./public/Day-197/index.html",
+                category: "games",
+                technologies: ["HTML", "CSS", "Javascript"],
+                features:["Simulation", "Interactive","Awareness"]
             }
-
         ];
 
         this.projects = projectsData.map((project, index) => ({
