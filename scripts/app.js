@@ -1751,6 +1751,15 @@ class WebDev100Days {
                 technologies: ["HTML", "CSS", "Javascript", "API"],
                 features: ["Recipe Finder"]
             },
+            {
+                originalDay: 168,
+                name: "AI Doc Studio",
+                description: "Summerize your Docs",
+                demoLink: "./public/Day-200/index.html",
+                category: "AI/ML",
+                technologies: ["HTML", "CSS", "Javascript", "Python"],
+                features: ["Summerizer","Txt","Doc","Pdf"]
+            }
 
         ];
 
