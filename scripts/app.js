@@ -1966,20 +1966,25 @@ class WebDev100Days {
                 features: ["Recipe Finder"]
             },
             {
-
-              
-
                 originalDay: 168,
+                name: "AI Doc Studio",
+                description: "Summerize your Docs",
+                demoLink: "./public/Day-200/index.html",
+                category: "AI/ML",
+                technologies: ["HTML", "CSS", "Javascript", "Python"],
+                features: ["Summerizer","Txt","Doc","Pdf"]
+            },
+            {
+                originalDay: 169,
                 name: "Colour Blindness Simulator",
                 description:"Understand color blindness effects with real-time simulation",
                 demoLink: "./public/Day-197/index.html",
                 category: "games",
                 technologies: ["HTML", "CSS", "Javascript"],
                 features:["Simulation", "Interactive","Awareness"]
-
             },
           {
-           originalDay: 169,
+           originalDay: 170,
                name: "Testimonial Carousel",
                description: "An interactive testimonial carousel with auto-slide, navigation buttons, and a grid of student reviews.",
                demoLink: "./public/TestimonialCarousel/index.html",
@@ -1993,8 +1998,7 @@ class WebDev100Days {
                  "Responsive design with hover effects",
                  "Custom styled cards with profile photos and reviews"
                          ]
-          },
-
+          }
         ];
 
         this.projects = projectsData.map((project, index) => ({
