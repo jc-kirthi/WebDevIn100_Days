@@ -57,6 +57,39 @@
             <div class="score-label">Security Score</div>
         </div>
 
+        <!-- 🔽 NEW PASSWORD GENERATOR CONTROLS -->
+        <div class="controls">
+
+            <div class="row">
+                <label for="lengthRange">Length: <span id="lengthValue">12</span></label>
+                <input type="range" id="lengthRange" min="6" max="32" value="12">
+            </div>
+
+            <div class="checkbox-group">
+                <label><input type="checkbox" id="cbLower" checked> lowercase (a-z)</label>
+                <label><input type="checkbox" id="cbUpper" checked> UPPERCASE (A-Z)</label>
+                <label><input type="checkbox" id="cbNumbers" checked> numbers (0-9)</label>
+                <label><input type="checkbox" id="cbSymbols" checked> symbols (!@#$%)</label>
+            </div>
+
+            <div class="options-row">
+                <label><input type="checkbox" id="excludeAmbiguous"> Exclude ambiguous chars (0,O,1,l)</label>
+                <label><input type="checkbox" id="passphraseMode"> Passphrase mode (random words)</label>
+            </div>
+
+            <div class="actions">
+                <button id="generateBtn" class="btn">Generate</button>
+                <button id="copyBtn" class="btn">Copy</button>
+            </div>
+
+            <div id="history" class="history">
+                <h4>Generation history</h4>
+                <ul id="historyList"></ul>
+            </div>
+
+        </div>
+        <!-- 🔼 END NEW CONTROLS -->
+
         <div class="tips">
             <h3><i class="fas fa-lightbulb"></i> Password Tips</h3>
             <ul>
@@ -74,3 +107,5 @@
     </script>
 </body>
 </html>
+
+
