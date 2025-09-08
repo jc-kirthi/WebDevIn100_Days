@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hacker Runner – Endless Firewall Escape</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-container">
+    <!-- Canvas: main game rendering -->
+    <canvas id="game-canvas" width="900" height="450"></canvas>
+
+    <!-- Start screen overlay -->
+    <div id="start-screen" class="overlay" data-state="start">
+      <h1 class="neon-title">Hacker Runner</h1>
+      <p class="subtitle">Endless Firewall Escape</p>
+      <button id="btn-start" class="neon-btn">Start Hack</button>
+      <p class="controls">Jump: <kbd>Space</kbd> or <kbd>↑</kbd> &nbsp; Slide: <kbd>↓</kbd></p>
+      <div class="credits">Made with ♥ — Cyberpunk Theme</div>
+    </div>
+
+    <!-- Game Over overlay -->
+    <div id="gameover-screen" class="overlay" data-state="gameover">
+      <h2 class="neon-title small">GAME OVER</h2>
+      <div id="final-score" class="big-text">Score: 0</div>
+      <div id="best-score" class="small-text">Best: 0</div>
+      <button id="btn-retry" class="neon-btn">Retry</button>
+      <button id="btn-menu" class="neon-btn ghost">Main Menu</button>
+    </div>
+
+    <!-- HUD -->
+    <div id="hud">
+      <div id="score">SCORE: 0</div>
+      <div id="packets">PACKETS: 0</div>
+      <div id="power-indicator"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
