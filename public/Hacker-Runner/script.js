@@ -1,16 +1,3 @@
-/**
- * script.js - Fixed and improved Hacker Runner
- * Key fixes:
- *  - overlay markup toggles corrected
- *  - player collision box corrected (top and height when sliding)
- *  - endGame reliably shows gameover overlay and updates best score
- *  - added simple touch controls for mobile
- *  - cleaned stray/no-op lines
- */
-
-/* ---------------------------
-   Config & Globals
-   --------------------------- */
 const canvas = document.getElementById('game-canvas');
 const ctx = canvas.getContext('2d');
 
