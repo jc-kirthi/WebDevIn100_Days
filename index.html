@@ -93,6 +93,8 @@
   <!-- Hero Section -->
   <section id="home" class="hero-section">
     <div class="hero-bg"></div>
+    <!-- Vanta.js Globe Background Container -->
+    <div id="vanta-bg"></div>
     <div class="container">
       <div class="hero-content animate-fade-in">
         <h1 class="hero-title"><span id="animated-hero-title"></span></h1>
@@ -250,22 +252,7 @@
       <div class="challenge-stats">
         <h3 class="challenge-stats-title">Challenge Statistics</h3>
         <div class="stats-grid">
-          <div class="stat-item">
-            <div class="stat-number">41</div>
-            <div class="stat-label">Projects Completed</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number">100</div>
-            <div class="stat-label">Total Goal</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number">3</div>
-            <div class="stat-label">Technologies</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-number">∞</div>
-            <div class="stat-label">Learning</div>
-          </div>
+          <!-- Stats will be dynamically generated with counter animation -->
         </div>
       </div>
     </div>
@@ -450,6 +437,9 @@
   <script src="chatbot.js"></script>
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script src="./scripts/hero-animation.js"></script>
+  <!-- Vanta.js for Globe Background -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
 <script>
   // Set current year in footer
   document.getElementById("copyYear").textContent = new Date().getFullYear();
