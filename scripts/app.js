@@ -1752,6 +1752,9 @@ class WebDev100Days {
                 features: ["Recipe Finder"]
             },
             {
+
+              
+
                 originalDay: 168,
                 name: "Colour Blindness Simulator",
                 description:"Understand color blindness effects with real-time simulation",
@@ -1759,7 +1762,24 @@ class WebDev100Days {
                 category: "games",
                 technologies: ["HTML", "CSS", "Javascript"],
                 features:["Simulation", "Interactive","Awareness"]
+
             },
+          {
+           originalDay: 169,
+               name: "Testimonial Carousel",
+               description: "An interactive testimonial carousel with auto-slide, navigation buttons, and a grid of student reviews.",
+               demoLink: "./public/TestimonialCarousel/index.html",
+               category: "components",
+               technologies: ["HTML", "CSS", "JavaScript"],
+               features: [
+                 "Auto-sliding testimonial carousel",
+                 "Previous/Next navigation buttons",
+                 "Interactive dots for quick navigation",
+                 "Dynamic testimonial grid with 12 student reviews",
+                 "Responsive design with hover effects",
+                 "Custom styled cards with profile photos and reviews"
+                         ]
+          },
 
         ];
 
