@@ -1998,7 +1998,18 @@ class WebDev100Days {
                  "Responsive design with hover effects",
                  "Custom styled cards with profile photos and reviews"
                          ]
-          }
+          },
+            {
+                originalDay: 171,
+                name: "Hacker Runner",
+                description: "Cyberpunk endless runner game where a hacker dodges firewalls and drones, collects data packets, and uses power-ups to score high.",
+                demoLink: "./public/Hacker-Runner/index.html",
+                category: "games",
+                technologies: ["HTML", "CSS", "JavaScript"],
+                features: [ "Endless runner with jump & slide",
+                 "Collectibles and power-ups",
+                 "Live scoring with high score tracking"]
+            }
         ];
 
         this.projects = projectsData.map((project, index) => ({
