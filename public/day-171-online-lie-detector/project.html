@@ -61,7 +61,7 @@
           <h1 class="mb-4">😂 Online Lie Detector</h1>
           <p class="text-muted">Speak or type a sentence, and let's see truth or lie</p>
           
-          <!-- Speech Button -->
+         
           <button id="speakBtn" class="btn btn-primary btn-lg mb-3 w-100">
             🎤 Speak Now
           </button>
@@ -88,7 +88,7 @@
     const spokenText = document.getElementById("spokenText");
     const result = document.getElementById("result");
 
-    // Helper function: show result
+    
     function showResult(sentence) {
       spokenText.textContent = `"${sentence}"`;
       const outcomes = ["Truth ✅", "Lie ❌"];
@@ -104,7 +104,7 @@
       }
     }
 
-    // --- Speech Recognition ---
+    
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     const recognition = SpeechRecognition ? new SpeechRecognition() : null;
 
@@ -132,7 +132,7 @@
       speakBtn.textContent = "Speech not supported 😢";
     }
 
-    // --- Text Input Check ---
+    
     checkBtn.addEventListener("click", () => {
       const text = textInput.value.trim();
       if (text) {
@@ -143,7 +143,7 @@
       }
     });
 
-    // Press Enter to check
+  
     textInput.addEventListener("keyup", (e) => {
       if (e.key === "Enter") checkBtn.click();
     });
@@ -151,108 +151,3 @@
 </body>
 </html>
 
-
-
-<!--
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reverse Dictionary 🔄</title>
-  <!-- Bootstrap 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: "Poppins", sans-serif;
-    }
-    .card {
-      border-radius: 20px;
-      box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
-    }
-    #result {
-      font-size: 1.2rem;
-      font-weight: bold;
-      margin-top: 20px;
-      color: #333;
-      transition: all 0.4s ease;
-      opacity: 0;
-    }
-    #result.show {
-      opacity: 1;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <div class="card p-4 text-center">
-          <h1 class="mb-4">🔄 Reverse Dictionary</h1>
-          <p class="text-muted">Type a description and we’ll suggest a word!</p>
-          
-          <div class="input-group mb-3">
-            <input type="text" id="descriptionInput" class="form-control" placeholder="e.g., fear of being alone">
-            <button id="searchBtn" class="btn btn-primary">Find Word</button>
-          </div>
-          
-          <div id="result"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    // Small dataset (can be expanded or connected to API)
-    const dictionary = [
-      { description: "fear of being alone", word: "Autophobia" },
-      { description: "fear of spiders", word: "Arachnophobia" },
-      { description: "fear of heights", word: "Acrophobia" },
-      { description: "love for humanity", word: "Philanthropy" },
-      { description: "study of stars", word: "Astronomy" },
-      { description: "fear of water", word: "Aquaphobia" },
-      { description: "fear of death", word: "Thanatophobia" },
-      { description: "love for books", word: "Bibliophilia" },
-      { description: "fear of darkness", word: "Nyctophobia" },
-      { description: "fear of clowns", word: "Coulrophobia" }
-    ];
-
-    const searchBtn = document.getElementById("searchBtn");
-    const descriptionInput = document.getElementById("descriptionInput");
-    const result = document.getElementById("result");
-
-    searchBtn.addEventListener("click", () => {
-      const input = descriptionInput.value.toLowerCase().trim();
-      result.className = ""; // reset
-      
-      if (!input) {
-        result.textContent = "⚠️ Please enter a description.";
-        result.classList.add("show");
-        return;
-      }
-
-      // Search for match
-      const match = dictionary.find(item => input.includes(item.description.toLowerCase()));
-      
-      if (match) {
-        result.textContent = `✨ Suggested Word: ${match.word}`;
-      } else {
-        result.textContent = "❌ Sorry, no match found in dictionary.";
-      }
-
-      result.classList.add("show");
-    });
-
-    // Allow pressing Enter key
-    descriptionInput.addEventListener("keyup", (e) => {
-      if (e.key === "Enter") searchBtn.click();
-    });
-  </script>
-</body>
-</html>
--->
