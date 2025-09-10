@@ -2000,6 +2000,7 @@ class WebDev100Days {
                          ]
           },
 
+
             {
                 originalDay: 171,
                 name: "Online Lie Detector",
@@ -2008,6 +2009,7 @@ class WebDev100Days {
                 category: "games",
                 technologies: ["HTML", "CSS", "JavaScript"],
                 features: ["User interaction", "Fun project", "Basic simulation"]
+
             }
         ];
 
