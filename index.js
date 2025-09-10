@@ -98,8 +98,8 @@ function updateNavbar() {
 }
 
 // Populate the table with project data
-function fillTable() {
-    const data = [
+//function fillTable() {
+  //  const data = [
        // ["Day 1", "To-Do List", "/public/Day-1_TodoList/index.html"],
        // ["Day 2", "Digital Clock", "/public/Day-2_digital_clock/digitalclock.html"],
        // ["Day 3", "ASCII Art Generator", "/public/Day-3_AsciiArtGenerator/index.html"],
@@ -159,11 +159,7 @@ function fillTable() {
         //["Day 70", "Memory Game App", "./public/Memory Game App/index.html"],
   
         // ["Day 75", "MyPaint", "public/day75-mypaint/index.html"],
-        ["Day 171", "Online Lie Detector", "/public/day171-online-lie-detector/project.html"],
-
-         
-    ];
-}
+        
 // See in Script Folder in app.js (where you can add your poject)];
 
 

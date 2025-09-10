@@ -1998,7 +1998,17 @@ class WebDev100Days {
                  "Responsive design with hover effects",
                  "Custom styled cards with profile photos and reviews"
                          ]
-          }
+          },
+
+            {
+                originalDay: 171,
+                name: "Online Lie Detector",
+                description: "Detect truth or lie based on user inputs with interactive analysis",
+                demoLink: "./public/day171-online-lie-detector/project.html",
+                category: "games",
+                technologies: ["HTML", "CSS", "JavaScript"],
+                features: ["User interaction", "Fun project", "Basic simulation"]
+            }
         ];
 
         this.projects = projectsData.map((project, index) => ({
