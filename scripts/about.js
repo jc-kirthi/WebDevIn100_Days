@@ -23,8 +23,7 @@ function initScrollAnimations() {
                 entry.target.classList.add('animated');
                 
                 // Add stagger effect for grid items
-                if (entry.target.parentElement.classList.contains('mission-content') ||
-                    entry.target.parentElement.classList.contains('team-grid')) {
+                if (entry.target.parentElement.classList.contains('mission-content')) {
                     const siblings = Array.from(entry.target.parentElement.children);
                     const index = siblings.indexOf(entry.target);
                     entry.target.style.animationDelay = `${index * 0.1}s`;
