@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - WebDevIn_100Days</title>
+
+  <!-- Favicon Setup -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://i.pinimg.com/736x/1c/54/f7/1c54f7b06d7723c21afc5035bf88a5ef.jpg">
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="https://i.pinimg.com/736x/1c/54/f7/1c54f7b06d7723c21afc5035bf88a5ef.jpg">
+  <link rel="manifest" href="./site.webmanifest">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Learn about WebDevIn_100Days - Our mission to make web development accessible through 100 interactive projects. Discover our story, vision, and team.">
+  <meta name="keywords" content="about us, web development, HTML, CSS, JavaScript, projects, learning, coding, frontend, team">
+  <meta name="author" content="WebDevIn_100Days Team">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About Us - WebDevIn_100Days">
+  <meta property="og:description" content="Learn about our mission to make web development accessible through 100 interactive projects.">
+  <meta property="og:image" content="https://i.imgur.com/3cztaa9.png">
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#6366f1">
+
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/about.css">
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!-- Animation libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<body>
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress">
+    <div class="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Modern Navigation -->
+  <nav class="modern-nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="https://i.pinimg.com/736x/1c/54/f7/1c54f7b06d7723c21afc5035bf88a5ef.jpg" alt="WebDevIn_100Days logo"
+          class="nav-logo" />
+        WebDevIn_100Days
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+        <li><a href="about.html" class="nav-link active">About Us</a></li>
+        <li><a href="contributors.html" class="nav-link">Contributors</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" title="Toggle theme">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+        <button class="mobile-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="index.html#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+        <li><a href="contributors.html" class="mobile-nav-link">Contributors</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="about-hero" class="about-hero">
+    <div class="hero-background"></div>
+    <div class="container">
+      <div class="hero-content animate__animated animate__fadeInUp">
+        <h1>About <span class="gradient-text">WebDevIn_100Days</span></h1>
+        <p class="hero-subtitle">Empowering developers through 100 days of hands-on web development projects</p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">100+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">10K+</span>
+            <span class="stat-label">Developers</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Contributors</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section id="mission" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Our Mission</h2>
+        <p class="section-subtitle">Making web development accessible, practical, and fun</p>
+      </div>
+      <div class="mission-content">
+        <div class="mission-card animate-on-scroll">
+          <div class="icon-wrapper">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Learn by Doing</h3>
+          <p>We believe the best way to learn web development is through hands-on practice. Our 100 projects are carefully crafted to provide progressive learning experiences.</p>
+        </div>
+        <div class="mission-card animate-on-scroll">
+          <div class="icon-wrapper">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Community Driven</h3>
+          <p>Our platform thrives on community contributions. We foster an environment where developers of all levels can learn, share, and grow together.</p>
+        </div>
+        <div class="mission-card animate-on-scroll">
+          <div class="icon-wrapper">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3>Real-World Skills</h3>
+          <p>Every project is designed to teach practical skills that you'll use in real-world development scenarios, from basic HTML to advanced JavaScript frameworks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision Section -->
+  <section id="vision" class="section-padding bg-secondary">
+    <div class="container">
+      <div class="vision-content">
+        <div class="vision-text animate-on-scroll">
+          <h2 class="section-title">Our Vision</h2>
+          <p class="vision-description">
+            To create the world's most comprehensive and accessible web development learning platform. We envision a future where anyone, regardless of their background, can master web development through practical, project-based learning.
+          </p>
+          <ul class="vision-list">
+            <li><i class="fas fa-check"></i> Bridge the gap between theory and practice</li>
+            <li><i class="fas fa-check"></i> Make learning web development enjoyable and engaging</li>
+            <li><i class="fas fa-check"></i> Build a supportive global developer community</li>
+            <li><i class="fas fa-check"></i> Continuously evolve with industry trends</li>
+          </ul>
+        </div>
+        <div class="vision-visual animate-on-scroll">
+          <div class="vision-graphic">
+            <div class="floating-elements">
+              <div class="element element-1"><i class="fab fa-html5"></i></div>
+              <div class="element element-2"><i class="fab fa-css3-alt"></i></div>
+              <div class="element element-3"><i class="fab fa-js-square"></i></div>
+              <div class="element element-4"><i class="fab fa-react"></i></div>
+              <div class="element element-5"><i class="fab fa-node-js"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story Section -->
+  <section id="story" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Our Story</h2>
+        <p class="section-subtitle">The journey that started it all</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-marker">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <div class="timeline-content">
+            <h3>The Idea</h3>
+            <span class="timeline-date">2023</span>
+            <p>It all started with a simple observation: traditional web development tutorials often lack practical application. We wanted to change that.</p>
+          </div>
+        </div>
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-marker">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <div class="timeline-content">
+            <h3>First Launch</h3>
+            <span class="timeline-date">Early 2024</span>
+            <p>We launched with our first 10 projects and quickly gained traction in the developer community. The response was overwhelming and encouraging.</p>
+          </div>
+        </div>
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-marker">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="timeline-content">
+            <h3>Community Growth</h3>
+            <span class="timeline-date">Mid 2024</span>
+            <p>Our community grew to thousands of developers, and contributors from around the world started adding their own projects and improvements.</p>
+          </div>
+        </div>
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-marker">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div class="timeline-content">
+            <h3>100 Projects Milestone</h3>
+            <span class="timeline-date">Late 2024</span>
+            <p>We reached our goal of 100 unique projects, each designed to teach different aspects of web development in an engaging way.</p>
+          </div>
+        </div>
+        <div class="timeline-item animate-on-scroll">
+          <div class="timeline-marker">
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="timeline-content">
+            <h3>Today</h3>
+            <span class="timeline-date">2025</span>
+            <p>We continue to grow and evolve, adding new technologies, improving existing projects, and building the future of web development education.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="section-padding bg-secondary">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Meet Our Team</h2>
+        <p class="section-subtitle">The passionate developers behind WebDevIn_100Days</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-member animate-on-scroll">
+          <div class="member-photo">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" alt="Alex Johnson">
+            <div class="member-overlay">
+              <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="member-info">
+            <h3>Alex Johnson</h3>
+            <p class="member-role">Founder & Lead Developer</p>
+            <p class="member-bio">Full-stack developer with 8+ years of experience. Passionate about making coding education accessible to everyone.</p>
+          </div>
+        </div>
+
+        <div class="team-member animate-on-scroll">
+          <div class="member-photo">
+            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&crop=face" alt="Sarah Chen">
+            <div class="member-overlay">
+              <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="member-info">
+            <h3>Sarah Chen</h3>
+            <p class="member-role">UX/UI Designer</p>
+            <p class="member-bio">Creative designer focused on creating intuitive and beautiful user experiences that make learning enjoyable.</p>
+          </div>
+        </div>
+
+        <div class="team-member animate-on-scroll">
+          <div class="member-photo">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="Michael Torres">
+            <div class="member-overlay">
+              <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-medium"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="member-info">
+            <h3>Michael Torres</h3>
+            <p class="member-role">Community Manager</p>
+            <p class="member-bio">Community enthusiast who ensures our platform remains welcoming and helpful for developers at all levels.</p>
+          </div>
+        </div>
+
+        <div class="team-member animate-on-scroll">
+          <div class="member-photo">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face" alt="Emily Rodriguez">
+            <div class="member-overlay">
+              <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-codepen"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="member-info">
+            <h3>Emily Rodriguez</h3>
+            <p class="member-role">Frontend Specialist</p>
+            <p class="member-bio">Expert in modern frontend technologies, ensuring our projects use the latest best practices and techniques.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">We'd love to hear from you</p>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info animate-on-scroll">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Email Us</h3>
+              <p>hello@webdevin100days.com</p>
+              <p>support@webdevin100days.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fab fa-github"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Contribute</h3>
+              <p>Fork our repository</p>
+              <p>Submit your projects</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-comments"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Community</h3>
+              <p>Join our Discord</p>
+              <p>Follow us on social media</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form animate-on-scroll">
+          <form class="form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>WebDevIn_100Days</h3>
+          <p>Making web development accessible through practical, hands-on projects.</p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contributors.html">Contributors</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Getting Started</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Community</h4>
+          <ul>
+            <li><a href="#">Discord</a></li>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">Discussions</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 WebDevIn_100Days. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./scripts/about.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
