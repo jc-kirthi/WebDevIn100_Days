@@ -2010,6 +2010,16 @@ class WebDev100Days {
                 technologies: ["HTML", "CSS", "JavaScript"],
                 features: ["User interaction", "Fun project", "Basic simulation"]
 
+            },
+                        {
+                originalDay: 172,
+                name: "Parallax Demo  ",
+                description: "When you scroll down the page you will see a beautiful parallax ",
+                demoLink: "./public/ParallaxscrollingDemo/index.html",
+                category: "creativity",
+                technologies: ["HTML", "CSS", "JavaScript"],
+                features: [" It demonstrates how multiple background layers and scroll-based animations, this template uses <em>placeholder sections"]
+
             }
         ];
 
