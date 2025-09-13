@@ -2010,6 +2010,16 @@ class WebDev100Days {
                 technologies: ["HTML", "CSS", "JavaScript"],
                 features: ["User interaction", "Fun project", "Basic simulation"]
 
+            },
+                        {
+                originalDay: 172,
+                name: "Typing-Speed-Test",
+                description: "Typing Speed Test having WPM, CPM accuracy and timing analysis.",
+                demoLink: "./public/Typing-Speed-Test/index.html",
+                category: "Test",
+                technologies: ["HTML", "CSS", "JavaScript"],
+                features: ["User interaction", "Fun project", "Basic simulation"]
+
             }
         ];
 
