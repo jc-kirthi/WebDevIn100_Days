@@ -2010,6 +2010,16 @@ class WebDev100Days {
                 technologies: ["HTML", "CSS", "JavaScript"],
                 features: ["User interaction", "Fun project", "Basic simulation"]
 
+            },
+            {
+                originalDay: 172,
+                name: "BeatPulse",
+                description: "BeatPulse rhythm game",
+                demoLink: "./public/BeatPulse/index.html",
+                category: "games",
+                technologies: ["HTML", "CSS", "JavaScript"],
+                features: ["BeatPulse", "Fun project", "Music"]
+
             }
         ];
 
