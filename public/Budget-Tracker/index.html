@@ -364,6 +364,12 @@
             <div class="transaction-list" id="transactionList">
                 <div class="no-transactions">No transactions yet. Add your first transaction above!</div>
             </div>
+            <div class="summary-card" style="margin-top: 20px; text-align: center;">
+                <div class="expense">
+                    Total Expense: <span id="total_expense">₹0.00</span>
+                    Total Income: <span id="total_income">₹0.00</span>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -443,6 +449,8 @@
 
                 document.getElementById('totalIncome').textContent = `₹${income.toFixed(2)}`;
                 document.getElementById('totalExpenses').textContent = `₹${expenses.toFixed(2)}`;
+                document.getElementById('total_income').textContent = `₹${income.toFixed(2)}`;
+                document.getElementById('total_expenses').textContent = `₹${expenses.toFixed(2)}`;
                 document.getElementById('balance').textContent = `₹${balance.toFixed(2)}`;
                 
                 const balanceEl = document.getElementById('balance');
