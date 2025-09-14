@@ -122,6 +122,17 @@
         <input type="hidden" name="_next" value="thankyou.html">
         <input type="hidden" name="_captcha" value="false">
       </form>
+
+      <!-- Success Message -->
+      <div class="success-message" id="successMessage">
+        <div class="success-content">
+          <div class="success-icon-check">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <h3 class="success-title">Thank you for your feedback!</h3>
+          <p class="success-text">Your response has been submitted successfully. Redirecting...</p>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -194,9 +205,43 @@
 
     // Form submission
     form.addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevent immediate submission
+      
       const submitBtn = document.getElementById('submitBtn');
+      const successMessage = document.getElementById('successMessage');
+      
+      // Show loading state
       submitBtn.classList.add('loading');
       submitBtn.disabled = true;
+      
+      // Simulate form processing delay and show success message
+      setTimeout(() => {
+        // Hide the form and show success message
+        successMessage.classList.add('show');
+        
+        // After showing success message, submit the form
+        setTimeout(() => {
+          // Create a temporary form to submit the data
+          const tempForm = document.createElement('form');
+          tempForm.action = form.action;
+          tempForm.method = form.method;
+          tempForm.style.display = 'none';
+          
+          // Copy all form data to temp form
+          const formData = new FormData(form);
+          formData.forEach((value, key) => {
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = key;
+            input.value = value;
+            tempForm.appendChild(input);
+          });
+          
+          // Submit the temp form
+          document.body.appendChild(tempForm);
+          tempForm.submit();
+        }, 2500); // Show success message for 2.5 seconds
+      }, 1000); // Show loading for 1 second
     });
 
     // Input focus animations
