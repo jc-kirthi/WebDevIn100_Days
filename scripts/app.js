@@ -1,4 +1,4 @@
-class WebDev100Days {
+ class WebDev100Days {
     constructor() {
         this.projects = [];
         this.filteredProjects = [];
