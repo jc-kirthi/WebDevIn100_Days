@@ -18,6 +18,23 @@
 </head>
 <body>
   <div class="background-pattern"></div>
+<<<<<<< Updated upstream
+=======
+  
+  <!-- Success Message Pop-up -->
+  <div class="success-message" id="successMessage">
+    <div class="success-content">
+      <div class="success-icon-check">
+        <i class="fas fa-check-circle"></i>
+      </div>
+      <div class="success-text-content">
+        <h3 class="success-title">Thank you for your feedback!</h3>
+        <p class="success-text">Your response has been submitted successfully. Redirecting...</p>
+      </div>
+    </div>
+  </div>
+  
+>>>>>>> Stashed changes
   <div class="main-container">
     <div class="feedback-card">
       <!-- Header Section -->
@@ -203,7 +220,11 @@
       stars.forEach(star => star.classList.remove('hover'));
     });
 
+<<<<<<< Updated upstream
     // Form submission
+=======
+    // Form submission with pop-up success message
+>>>>>>> Stashed changes
     form.addEventListener('submit', function(e) {
       e.preventDefault(); // Prevent immediate submission
       
@@ -216,7 +237,11 @@
       
       // Simulate form processing delay and show success message
       setTimeout(() => {
+<<<<<<< Updated upstream
         // Hide the form and show success message
+=======
+        // Show success message pop-up
+>>>>>>> Stashed changes
         successMessage.classList.add('show');
         
         // After showing success message, submit the form
