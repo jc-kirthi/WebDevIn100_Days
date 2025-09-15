@@ -1999,16 +1999,27 @@ class WebDev100Days {
                  "Custom styled cards with profile photos and reviews"
                          ]
           },
+
+
             {
                 originalDay: 171,
-                name: "Hacker Runner",
-                description: "Cyberpunk endless runner game where a hacker dodges firewalls and drones, collects data packets, and uses power-ups to score high.",
-                demoLink: "./public/Hacker-Runner/index.html",
+                name: "Online Lie Detector",
+                description: "Detect truth or lie based on user inputs with interactive analysis",
+                demoLink: "./public/day171-online-lie-detector/project.html",
                 category: "games",
                 technologies: ["HTML", "CSS", "JavaScript"],
-                features: [ "Endless runner with jump & slide",
-                 "Collectibles and power-ups",
-                 "Live scoring with high score tracking"]
+                features: ["User interaction", "Fun project", "Basic simulation"]
+
+            },
+                        {
+                originalDay: 172,
+                name: "Typing-Speed-Test",
+                description: "Typing Speed Test having WPM, CPM accuracy and timing analysis.",
+                demoLink: "./public/Typing-Speed-Test/index.html",
+                category: "Test",
+                technologies: ["HTML", "CSS", "JavaScript"],
+                features: ["User interaction", "Fun project", "Basic simulation"]
+
             }
         ];
 
