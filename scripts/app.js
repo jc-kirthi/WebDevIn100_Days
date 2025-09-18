@@ -2038,6 +2038,15 @@
               technologies: ["HTML", "CSS", "JavaScript"],
               features: ["Multiple background layers", "Scroll-based animations", "Placeholder sections"]
           }
+           {
+                originalDay: 175,
+                name: "Grand Piano",
+                description: "Play the Piano",
+                demoLink: "./public/Grand-Piano/index.html",
+                category: "games",
+                technologies: ["HTML", "CSS", "JavaScript"],
+                features: ["Piano"]
+          }
 ];
 
 
