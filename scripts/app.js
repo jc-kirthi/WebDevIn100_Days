@@ -2037,7 +2037,7 @@
               category: "creativity",
               technologies: ["HTML", "CSS", "JavaScript"],
               features: ["Multiple background layers", "Scroll-based animations", "Placeholder sections"]
-          }
+          },
           {
                 originalDay: 175,
                 name: "Grand Piano",
@@ -2046,7 +2046,7 @@
                 category: "entertainment",
                 technologies: ["HTML", "CSS", "JavaScript"],
                 features: ["Interactive Piano Keys", "Sound Effects", "Keyboard Support", "Realistic Design"]
-          }
+          },
 ];
 
 
