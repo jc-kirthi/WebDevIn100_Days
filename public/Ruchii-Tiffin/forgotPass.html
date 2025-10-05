@@ -24,15 +24,16 @@
 
     .container {
       background: rgba(255, 255, 255, 0.95);
-      padding: 30px;
-      border-radius: 12px;
+      padding: 40px;
+      border-radius: 16px;
       width: 350px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     }
 
     .container h2 {
       text-align: center;
-      margin-bottom: 20px;
+      font-size: 28px;
+      margin-bottom: 30px;
       color: #333;
     }
 
@@ -43,48 +44,89 @@
     .input-group label {
       display: block;
       margin-bottom: 6px;
-      font-size: 14px;
+      font-size: 16px;
       color: #444;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     .input-group input {
       width: 100%;
       padding: 10px;
-      border: 1px solid #aaa;
+      border: 2px solid #e1e1e1;
       border-radius: 8px;
-      font-size: 14px;
+      font-size: 16px;
+      transition: all 0.3s ease;
     }
 
     .btn {
       width: 100%;
-      padding: 12px;
-      background: #4a90e2;
+      padding: 15px;
+      background: #ff4d4d;
       border: none;
       border-radius: 8px;
       font-size: 16px;
       color: #fff;
       cursor: pointer;
       transition: 0.3s;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin-top: 10px;
     }
 
     .btn:hover {
-      background: #357ab8;
+      background: #ff3333;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 77, 77, 0.3);
     }
-
+    .btn:active {
+      transform: translateY(0);
+    }
     .login-link {
       margin-top: 15px;
       text-align: center;
     }
 
     .login-link a {
-      text-decoration: none;
-      color: #4a90e2;
+      color: #666;
       font-size: 14px;
+      text-decoration: none;
     }
+    .login-link a:hover{
+     color: #ff4d4d;
+    }
+    .auth-box {
+            animation: slideIn 0.5s ease-out;
+    }
+    .logo {
+            width: 80px;
+            height: 80px;
+            background: #ff4d4d;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .logo svg {
+            width: 40px;
+            height: 40px;
+            fill: white;
+        }
+        .logo-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
   </style>
 </head>
 <body>
   <div class="container">
+    <div class="logo-container">
+      <div class="logo">
+        <svg viewBox="0 0 24 24">
+          <path d="M12,3L4,9V21H20V9L12,3M12,7.5L16,10.5V11.5L12,8.5L8,11.5V10.5L12,7.5M6,19V12.5L12,9.5L18,12.5V19H6Z"/>
+        </svg>
+      </div>
+  </div>  
     <h2>Reset Password</h2>
     <form id="forgotForm">
       <div class="input-group">
